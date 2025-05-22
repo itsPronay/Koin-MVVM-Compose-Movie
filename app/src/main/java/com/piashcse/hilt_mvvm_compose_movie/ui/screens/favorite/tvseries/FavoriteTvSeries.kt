@@ -30,7 +30,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.piashcse.hilt_mvvm_compose_movie.R
 import com.piashcse.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
@@ -46,10 +45,13 @@ import com.skydoves.landscapist.coil.CoilImage
 import com.skydoves.landscapist.components.rememberImageComponent
 import com.skydoves.landscapist.placeholder.shimmer.Shimmer
 import com.skydoves.landscapist.placeholder.shimmer.ShimmerPlugin
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun FavoriteTvSeries(navController: NavController) {
-    val viewModel = hiltViewModel<FavoriteTvSeriesViewModel>()
+fun FavoriteTvSeries(
+    navController: NavController,
+    viewModel: FavoriteTvSeriesViewModel = koinViewModel()
+) {
     val favoriteTvSeries by viewModel.favoriteTvSeries.collectAsState()
 
     LaunchedEffect(Unit) {

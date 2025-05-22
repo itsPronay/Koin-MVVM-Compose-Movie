@@ -7,16 +7,13 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.tv_series_detail.TvSeries
 import com.piashcse.hilt_mvvm_compose_movie.data.repository.remote.tvseries.TvSeriesRepository
 import com.piashcse.hilt_mvvm_compose_movie.ui.state.TvSeriesDetailUiState
 import com.piashcse.hilt_mvvm_compose_movie.utils.network.DataState
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class TvSeriesDetailViewModel @Inject constructor(
+class TvSeriesDetailViewModel (
     private val repo: TvSeriesRepository,
     private val tvSeriesDao: FavoriteTvSeriesDao,
 ) : ViewModel() {

@@ -4,20 +4,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.piashcse.hilt_mvvm_compose_movie.data.model.moviedetail.Genre
 import com.piashcse.hilt_mvvm_compose_movie.navigation.Screen
 import com.piashcse.hilt_mvvm_compose_movie.ui.component.TvSeries
 import component.base.BaseColumn
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun TopRatedTvSeries(
     navController: NavController,
     genres: List<Genre>? = null,
+    viewModel: TopRatedTvSeriesViewModel = koinViewModel()
 ) {
-    val viewModel = hiltViewModel<TopRatedTvSeriesViewModel>()
     val tvSeriesItems = viewModel.topRatedTvSeries.collectAsLazyPagingItems()
     val uiState by viewModel.uiState.collectAsState()
 

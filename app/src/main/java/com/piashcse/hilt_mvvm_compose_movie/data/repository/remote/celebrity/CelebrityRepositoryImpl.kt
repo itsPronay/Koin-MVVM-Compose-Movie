@@ -8,9 +8,8 @@ import com.piashcse.hilt_mvvm_compose_movie.data.datasource.remote.paging_dataso
 import com.piashcse.hilt_mvvm_compose_movie.data.datasource.remote.paging_datasource.celebrities.TrendingCelebritiesPagingDataSource
 import com.piashcse.hilt_mvvm_compose_movie.data.model.celebrities.Celebrity
 import kotlinx.coroutines.flow.Flow
-import javax.inject.Inject
 
-class CelebrityRepositoryImpl @Inject constructor(
+class CelebrityRepositoryImpl (
     private val apiService: ApiService,
 ) : CelebrityRepository {
     override fun popularCelebrities(page: Int): Flow<PagingData<Celebrity>> =

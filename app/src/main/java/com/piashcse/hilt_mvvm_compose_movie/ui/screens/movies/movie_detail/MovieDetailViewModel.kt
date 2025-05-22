@@ -7,17 +7,13 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.moviedetail.MovieDetail
 import com.piashcse.hilt_mvvm_compose_movie.data.repository.remote.movie.MovieRepository
 import com.piashcse.hilt_mvvm_compose_movie.ui.state.MovieDetailUiState
 import com.piashcse.hilt_mvvm_compose_movie.utils.network.DataState
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-
-@HiltViewModel
-class MovieDetailViewModel @Inject constructor(
+class MovieDetailViewModel (
     private val repo: MovieRepository,
     private val movieDetailDao: FavoriteMovieDao,
 ) : ViewModel() {

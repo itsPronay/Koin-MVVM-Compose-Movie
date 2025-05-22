@@ -12,16 +12,13 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.moviedetail.Genre
 import com.piashcse.hilt_mvvm_compose_movie.data.repository.remote.movie.MovieRepository
 import com.piashcse.hilt_mvvm_compose_movie.ui.state.UiState
 import com.piashcse.hilt_mvvm_compose_movie.utils.AppConstant
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
-import javax.inject.Inject
 
-@HiltViewModel
-class TopRatedMovieViewModel @Inject constructor(
+class TopRatedMovieViewModel(
     private val repo: MovieRepository,
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(UiState())

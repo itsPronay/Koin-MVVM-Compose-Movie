@@ -28,7 +28,7 @@ private val LightColorPalette = lightColorScheme(
 )
 
 @Composable
-fun HiltMVVMComposeMovieTheme(
+fun KoinMVVMComposeMovieTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {

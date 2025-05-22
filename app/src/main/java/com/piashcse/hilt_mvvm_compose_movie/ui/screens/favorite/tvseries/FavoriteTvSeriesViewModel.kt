@@ -4,14 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.piashcse.hilt_mvvm_compose_movie.data.model.tv_series_detail.TvSeriesDetail
 import com.piashcse.hilt_mvvm_compose_movie.data.repository.local.tvseries.LocalTvSeriesRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class FavoriteTvSeriesViewModel @Inject constructor(
+class FavoriteTvSeriesViewModel(
     private val localTvSeriesRepo: LocalTvSeriesRepository,
 ) : ViewModel() {
     private val _favoriteTvSeries = MutableStateFlow<List<TvSeriesDetail?>>(arrayListOf())

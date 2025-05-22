@@ -15,9 +15,8 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.tv_series_detail.TvSeries
 import com.piashcse.hilt_mvvm_compose_movie.utils.network.DataState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
-class TvSeriesRepositoryImpl @Inject constructor(
+class TvSeriesRepositoryImpl (
     private val apiService: ApiService
 ) : TvSeriesRepository {
     override fun airingTodayTvSeriesPagingDataSource(genreId: String?): Flow<PagingData<TvSeriesItem>> =
