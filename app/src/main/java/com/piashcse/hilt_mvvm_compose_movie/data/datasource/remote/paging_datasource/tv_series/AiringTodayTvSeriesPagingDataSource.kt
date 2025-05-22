@@ -7,9 +7,8 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.TvSeriesItem
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException
-import javax.inject.Inject
 
-class AiringTodayTvSeriesPagingDataSource @Inject constructor(
+class AiringTodayTvSeriesPagingDataSource(
     private val apiService: ApiService,
     private val genreId: String?
 ) :

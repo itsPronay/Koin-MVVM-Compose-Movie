@@ -6,9 +6,8 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.artist.ArtistMovies
 import com.piashcse.hilt_mvvm_compose_movie.utils.network.DataState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
-class ArtistRepositoryImpl @Inject constructor(
+class ArtistRepositoryImpl (
     private val apiService: ApiService,
 ) : ArtistRepository {
     override suspend fun artistAllMovies(movieId: Int): Flow<DataState<ArtistMovies>> = flow {

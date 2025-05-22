@@ -35,7 +35,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.piashcse.hilt_mvvm_compose_movie.R
@@ -57,11 +56,13 @@ import com.piashcse.hilt_mvvm_compose_movie.utils.ACTIVE_MOVIE_TAB
 import com.piashcse.hilt_mvvm_compose_movie.utils.ACTIVE_TV_SERIES_TAB
 import com.piashcse.hilt_mvvm_compose_movie.utils.networkconnection.ConnectionState
 import com.piashcse.hilt_mvvm_compose_movie.utils.networkconnection.connectivityState
+import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
-    val mainViewModel = hiltViewModel<MainViewModel>()
+fun MainScreen(
+    mainViewModel: MainViewModel = koinViewModel()
+) {
     val navController = rememberNavController()
     val isAppBarVisible = remember { mutableStateOf(true) }
     val connection by connectivityState()

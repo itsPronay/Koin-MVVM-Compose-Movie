@@ -7,9 +7,8 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.celebrities.Celebrity
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException
-import javax.inject.Inject
 
-class PopularCelebritiesPagingDataSource @Inject constructor(private val apiService: ApiService) :
+class PopularCelebritiesPagingDataSource (private val apiService: ApiService) :
     PagingSource<Int, Celebrity>() {
 
     override fun getRefreshKey(state: PagingState<Int, Celebrity>): Int? {

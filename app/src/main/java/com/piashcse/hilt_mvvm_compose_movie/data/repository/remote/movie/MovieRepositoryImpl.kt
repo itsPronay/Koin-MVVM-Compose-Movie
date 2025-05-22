@@ -17,9 +17,8 @@ import com.piashcse.hilt_mvvm_compose_movie.data.model.moviedetail.MovieDetail
 import com.piashcse.hilt_mvvm_compose_movie.utils.network.DataState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
-class MovieRepositoryImpl @Inject constructor(
+class MovieRepositoryImpl (
     private val apiService: ApiService,
 ) : MovieRepository {
     override suspend fun movieDetail(movieId: Int): Flow<DataState<MovieDetail>> = flow {

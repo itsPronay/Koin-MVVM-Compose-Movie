@@ -46,7 +46,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.piashcse.hilt_mvvm_compose_movie.R
 import com.piashcse.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
@@ -71,10 +70,14 @@ import com.skydoves.landscapist.components.rememberImageComponent
 import com.skydoves.landscapist.placeholder.shimmer.Shimmer
 import com.skydoves.landscapist.placeholder.shimmer.ShimmerPlugin
 import component.base.BaseColumn
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun MovieDetail(navController: NavController, movieId: Int) {
-    val viewModel = hiltViewModel<MovieDetailViewModel>()
+fun MovieDetail(
+    navController: NavController,
+    movieId: Int,
+    viewModel: MovieDetailViewModel = koinViewModel()
+) {
     val uiState by viewModel.uiState.collectAsState()
 
 
