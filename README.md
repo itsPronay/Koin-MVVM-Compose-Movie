@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 <a href="https://github.com/piashcse"><img alt="License" src="https://img.shields.io/static/v1?label=GitHub&message=piashcse&color=C51162"/></a>
 
-Movie World app built with Jetpack Compose, Hilt, Coroutines, Flow, Room and ViewModel based on MVVM architecture. The app follows the architecture to ensure clean, maintainable code and delivers a responsive, modern UI experience, leveraging [The Movie DB API](https://www.themoviedb.org). </br>
+Movie World app built with Jetpack Compose, Koin, Coroutines, Flow, Room and ViewModel based on MVVM architecture. The app follows the architecture to ensure clean, maintainable code and delivers a responsive, modern UI experience, leveraging [The Movie DB API](https://www.themoviedb.org). </br>
 
 
 <p align="center">
@@ -79,29 +79,23 @@ defaultConfig {
   - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes.
   - [Paging3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - The Paging library helps you load and display pages of data from a larger dataset from local storage or over network
 - [Dependency Injection](https://developer.android.com/training/dependency-injection)
-  - [Hilt](https://dagger.dev/hilt) - Easier way to incorporate Dagger DI into Android apps.
+  - [Koin](https://insert-koin.io/) - Easier way to incorporate Koin DI into Android apps.
 - [Room](https://developer.android.com/training/data-storage/room) - The Room database provides an abstraction layer over SQLite to allow fluent database access while harnessing the full power of SQLite
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android.
 - [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
 
-## 👨 Developed By
+## Developers
 
-<a href="https://twitter.com/piashcse" target="_blank">
-  <img src="https://avatars.githubusercontent.com/piashcse" width="80" align="left">
-</a>
+Originally forked from **Mehedi Hassan Piash** – [@piashcse](https://twitter.com/piashcse)  
+Currently developed by **Pronay Sarker** – [LinkedIn](https://www.linkedin.com/in/itspronay/)
 
-**Mehedi Hassan Piash**
 
-[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?logo=x&logoColor=white&style=for-the-badge)](https://twitter.com/piashcse)
-[![Medium](https://img.shields.io/badge/-Medium-00AB6C?logo=medium&logoColor=white&style=for-the-badge)](https://medium.com/@piashcse)
-[![Linkedin](https://img.shields.io/badge/-LinkedIn-0077B5?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/piashcse/)
-[![Web](https://img.shields.io/badge/-Web-0073E6?logo=appveyor&logoColor=white&style=for-the-badge)](https://piashcse.github.io/)
-[![Blog](https://img.shields.io/badge/-Blog-0077B5?logo=readme&logoColor=white&style=for-the-badge)](https://piashcse.blogspot.com)
 
 # License
 ```
 Copyright 2024 piashcse (Mehedi Hassan Piash)
+Modified and maintained by Pronay Sarker 
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
