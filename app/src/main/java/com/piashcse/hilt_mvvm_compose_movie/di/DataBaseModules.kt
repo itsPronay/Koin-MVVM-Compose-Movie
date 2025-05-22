@@ -19,37 +19,3 @@ val DataBaseModule = module {
     single { get<MovieDatabase>().getFavoriteTvSeriesDao() }
     single { get<MovieDatabase>().getFavoriteMovieDetailDao() }
 }
-
-//@Module
-//@InstallIn(SingletonComponent::class)
-//object DataBaseModules {
-//    @Provides
-//    @Singleton
-//    fun provideMovieDatabase(@ApplicationContext context: Context): MovieDatabase {
-//        return Room.databaseBuilder(
-//            context,
-//            MovieDatabase::class.java,
-//            "movieWorld.db"
-//        ).build()
-//    }
-//
-//    @Singleton
-//    @Provides
-//    fun provideMovieDetailDao(moviesDatabase: MovieDatabase): FavoriteMovieDao =
-//        moviesDatabase.getFavoriteMovieDetailDao()
-//
-//    @Singleton
-//    @Provides
-//    fun provideLocalMovieRepo(movieDao: FavoriteMovieDao): LocalMovieRepositoryImpl =
-//        LocalMovieRepositoryImpl(movieDao)
-//
-//    @Singleton
-//    @Provides
-//    fun provideTvSeriesDao(moviesDatabase: MovieDatabase): FavoriteTvSeriesDao =
-//        moviesDatabase.getFavoriteTvSeriesDao()
-//
-//    @Singleton
-//    @Provides
-//    fun provideLocalTvSeriesRepo(tvSeriesDao: FavoriteTvSeriesDao): LocalTvSeriesRepositoryImpl =
-//        LocalTvSeriesRepositoryImpl(tvSeriesDao)
-//}
